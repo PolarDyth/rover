@@ -1,0 +1,29 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# C++ and CMake (pi-controller)
+build/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+*.o
+*.out
+*.exe
+
+# ESP32 / PlatformIO files (esp32-firmware)
+.pio/
+sdkconfig.old
+
+# Logs
+logs/
+*.log
