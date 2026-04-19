@@ -7,4 +7,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(pi_controller
     src/main.cpp
     src/SerialPort.cpp
+    include/ControllerConfig.hpp
 )
