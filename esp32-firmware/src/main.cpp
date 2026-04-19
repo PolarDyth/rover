@@ -9,6 +9,8 @@ MotorDriver motors(
     MotorDriver::MotorConfig{RoverConfig::RIGHT_MOTOR_PWM_PIN, RoverConfig::RIGHT_MOTOR_DIR_PIN, false}
 );
 
+void processCommand(const String& commandStr);
+
 // Buffer for incoming serial data
 String serialBuffer;
 unsigned long lastCommandTime = 0;

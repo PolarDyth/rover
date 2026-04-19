@@ -3,15 +3,16 @@
 
 CommandProtocol::Command CommandProtocol::parseCommand(const String& input) {
     Command cmd;
-    input.trim();
+    String trimmed = input;
+    trimmed.trim();
 
     // Find first space to separate action from parameters
-    int spaceIndex = input.indexOf(' ');
+    int spaceIndex = trimmed.indexOf(' ');
     if (spaceIndex == -1) {
-        cmd.action = input;
+        cmd.action = trimmed;
     } else {
-        cmd.action = input.substring(0, spaceIndex);
-        String paramString = input.substring(spaceIndex + 1);
+        cmd.action = trimmed.substring(0, spaceIndex);
+        String paramString = trimmed.substring(spaceIndex + 1);
         cmd.params = parseParams(paramString);
     }
 
